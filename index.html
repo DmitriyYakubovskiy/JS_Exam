@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row allign-content-start">
+                <div class="col-sm-6 col-md-3 col-lg-1 col-6">
+                    <a href="index.html">
+                        <p class = "text-center mt-2">Главная</p>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-2 col-6">
+                    <a href="index.html">
+                        <p class = "text-center mt-2">Мои задачи</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-4">
+        <h1 class="text-center mb-4">Мой список дел</h1>
+        <div class="row allign-content-start">
+            <div class="col-md-3">
+                <form id="taskForm">
+                    <h3 class="text-center">Создание задачи</h3>
+                    <div class="mb-3">
+                        <label for="taskName" class="form-label">Название задачи</label>
+                        <input type="text" class="form-control" id="taskName" required minlength="2" maxlength="50" placeholder="Введите название задачи">
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskPriority" class="form-label">Приоритет</label>
+                        <select class="form-select" id="taskPriority" required>
+                            <option value="Низкий">Низкий</option>
+                            <option value="Средний">Средний</option>
+                            <option value="Высокий">Высокий</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskDeadline" class="form-label">Дата окончания</label>
+                        <input type="date" class="form-control" id="taskDeadline" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskHashtag" class="form-label">Хэштег</label>
+                        <input type="text" class="form-control" id="taskHashtag" placeholder="#hashtag">
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskComment" class="form-label">Комментарий</label>
+                        <textarea class="form-control" id="taskComment" rows="3" placeholder="Добавьте комментарий"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3">Добавить задачу</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center">Все ваши задачи</h3>
+                <div class="d-flex justify-content-between mb-3">
+                    <select class="form-select" id="taskView">
+                        <option value="all">Все задачи</option>
+                        <option value="today">Сегодня</option>
+                        <option value="week">Неделя</option>
+                        <option value="month">Месяц</option>
+                        <option value="year">Год</option>
+                    </select>
+                </div>
+                <ul id="taskList" class="list-group">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDf" crossorigin="anonymous"></script>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
